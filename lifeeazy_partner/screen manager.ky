@@ -1,0 +1,59 @@
+
+# screen_helper ="""
+
+# ScreenManager:
+#     MenuScreen:
+#     ProfileScreen:
+#     Uploadscreen:
+
+# <MenuScreen>:
+#     name: 'menu'
+#     MDRectangleFlatButton:
+#         text:'Profile'
+#         pos_hint:{'center_x':0.5,'center_y':0.4}
+#         on_press:root.manager.current='profile'
+#     MDRectangleFlatButton:
+#         text:'Login'   
+#         pos_hint:{'center_x':0.5,'center_y':0.2}
+#         on_press:root.manager.current='upload'
+
+# <ProfileScreen>:
+#     name: 'profile'
+#     MDLabel:
+#         text:'Wlcome Madhu'
+#         halign:'center'
+#     MDRectangleFlatButton:
+#         text:'Back'
+#         pos_hint:{'center_x':0.5,'center_y':0.1}
+#         on_press:root.manager.current='menu'
+#     MDRectangleFlatButton:
+#         text:'upload_doc'   
+#         pos_hint:{'center_x':0.5,'center_y':0.2}
+#         on_press:root.manager.current='upload'
+
+
+# <Uploadscreen>:
+#     name: 'upload'
+#     MDLabel:
+#         text:'upload documents'
+#         halign:'center'
+#     MDRectangleFlatButton:
+#         text:'Back'
+#         pos_hint:{'center_x':0.5,'center_y':0.1}
+#         on_press:root.manager.current='menu'
+
+
+# """
+
+# class MenuScreen(Screen):
+#     pass
+# class ProfileScreen(Screen):
+#     pass
+
+# class Uploadscreen(Screen):
+#     pass
+
+# sm=ScreenManager()
+# sm.add_widget(ProfileScreen(name='Profile'))
+# sm.add_widget(MenuScreen(name='menu'))
+# sm.add_widget(Uploadscreen(name='upload'))
