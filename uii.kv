@@ -1,0 +1,19 @@
+<Demo1>:
+    MDLabel:
+        text:"Screen1"
+        halign:"center"
+    MDRectangleFlatButton:
+        text:'go to screen'
+        pos_hint:{'center_x':0.5, 'center_y':0.4}
+        on_release:root.manager.current='demo2'
+
+<Demo2>:
+    MDLabel:
+        text:"Screen2"
+        halign:"center"
+    MDRectangleFlatButton:
+        text:'go to screen'
+        pos_hint:{'center_x':0.5, 'center_y':0.4}
+        on_release:root.manager.current='demo1'
+
+        

@@ -1,0 +1,37 @@
+WindowManger:
+    FirstWindow:
+    SecondWindow:
+
+<FirstWindow>:
+    name:'first_window'
+
+    BoxLayout:
+        orientation:"vertical"
+        size:root.width,root.height
+        Label:
+            text:'first window'
+            font_size:32
+        Button:
+            text:'first window button'
+            on_release:
+                app.root.current = 'second_window'
+                root.manager.transition.direction='left'
+
+
+
+<SecondWindow>:
+    name:'second_window'
+    BoxLayout:
+
+        orientation:'vertical'
+        size:root.width,root.height
+        Label:
+            text:'second window'
+            font_size:32
+        Button:
+            text:'second window button'
+            on_release:
+                root.manager.current = 'first_window'
+                root.manager.transition.direction='up'
+
+
