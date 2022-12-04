@@ -5,7 +5,9 @@
     MDRectangleFlatButton:
         text:'go to screen'
         pos_hint:{'center_x':0.5, 'center_y':0.4}
-        on_release:root.manager.current='demo2'
+        on_release:
+            root.show_data()
+            root.manager.current='demo2'
 
 <Demo2>:
     MDLabel:
